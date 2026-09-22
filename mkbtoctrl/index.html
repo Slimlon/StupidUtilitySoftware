@@ -125,8 +125,10 @@
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--accent); color: #17100c; }
   .btn-primary:hover { background: var(--accent-bright); }
-  .btn-secondary { background: transparent; border-color: var(--border); color: var(--text); }
+  .btn-secondary { background: transparent; border: 2px solid rgba(235, 235, 232, 0.35); color: var(--text); }
   .btn-secondary:hover { border-color: var(--text-dim); }
+
+  .btn-icon { font-size: 1rem; line-height: 1; }
 
   .price-note { margin-top: 18px; font-size: 0.85rem; color: var(--text-dim); }
   .price-note strong { color: var(--text); }
@@ -176,11 +178,13 @@
   .card p { font-size: 0.9rem; color: var(--text-dim); }
 
   .steps { margin-top: 32px; display: flex; flex-direction: column; gap: 0; }
-  .step { display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border); }
+  .step { display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border); align-items: flex-start; flex-wrap: wrap; }
   .step:last-child { border-bottom: 1px solid var(--border); }
-  .step-num { font-family: 'JetBrains Mono', monospace; color: var(--text-dim); font-size: 0.85rem; flex-shrink: 0; width: 28px; }
+  .step-num { font-family: 'JetBrains Mono', monospace; color: var(--text-dim); font-size: 0.85rem; flex-shrink: 0; width: 28px; padding-top: 2px; }
+  .step-body { flex: 1; min-width: 200px; }
   .step-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
   .step-body p { font-size: 0.9rem; color: var(--text-dim); }
+  .step-action { flex-shrink: 0; }
 
   .price-card {
     margin-top: 32px;
@@ -198,6 +202,9 @@
   .price-amount span { font-size: 1rem; color: var(--text-dim); font-weight: 500; }
   .price-list { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; color: var(--text-dim); }
   .price-list li::before { content: "— "; color: var(--accent); }
+  .price-actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+  .price-actions .btn { justify-content: center; }
+  .price-actions-sub { font-size: 0.78rem; color: var(--text-dim); text-align: center; }
 
   footer {
     padding: 40px 24px 56px;
@@ -242,7 +249,9 @@
   </p>
   <div class="cta-row">
     <a class="btn btn-primary" href="#pricing">Get access</a>
-    <a class="btn btn-secondary" href="#how">How it works</a>
+    <a class="btn btn-secondary" href="https://github.com/Slimlon/StupidUtilitySoftware/releases/latest/download/MKBtoCTRL.zip">
+      <span class="btn-icon">↓</span> Download
+    </a>
   </div>
   <p class="price-note">From <strong>€3 / month</strong> via Patreon · license key delivered automatically by email</p>
 
@@ -287,6 +296,11 @@
         <h3>Install</h3>
         <p>Download the ZIP, install the ViGEmBus driver once, then start MKBtoCTRL.</p>
       </div>
+      <div class="step-action">
+        <a class="btn btn-secondary" href="https://github.com/Slimlon/StupidUtilitySoftware/releases/latest/download/MKBtoCTRL.zip">
+          <span class="btn-icon">↓</span> Download
+        </a>
+      </div>
     </div>
     <div class="step">
       <div class="step-num mono">02</div>
@@ -318,7 +332,13 @@
         <li>License key delivered automatically by email</li>
       </ul>
     </div>
-    <a class="btn btn-primary" href="https://www.patreon.com/Slimlon" target="_blank" rel="noopener">Join on Patreon</a>
+    <div class="price-actions">
+      <a class="btn btn-primary" href="https://www.patreon.com/Slimlon" target="_blank" rel="noopener">Join on Patreon</a>
+      <a class="btn btn-secondary" href="https://github.com/Slimlon/StupidUtilitySoftware/releases/latest/download/MKBtoCTRL.zip">
+        <span class="btn-icon">↓</span> Download
+      </a>
+      <span class="price-actions-sub">Already a member? Download works right away.</span>
+    </div>
   </div>
 </section>
 
