@@ -406,7 +406,7 @@
     forgotStatus.textContent = 'Sending...';
 
     try {
-      const res = await fetch('https://kcdeyqbcoozpibwqnxyh.supabase.co/functions/v1/resend-license', {
+      const res = await fetch('https://kcdeyqbcoozpibwqnxyh.supabase.co/functions/v1/Resend-license', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
